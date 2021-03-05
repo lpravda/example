@@ -183,13 +183,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pdb_id</strong> (<em>str</em>) – PDB identifier.</p></li>
-<li><p><strong>chain_id</strong> (<em>str</em>) – label_asym_id identifier.</p></li>
-<li><p><strong>file_path</strong> (<em>str</em>) – Path where the structure should be saved.</p></li>
+<li><p><strong>pdb_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – PDB identifier.</p></li>
+<li><p><strong>chain_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – label_asym_id identifier.</p></li>
+<li><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Path where the structure should be saved.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If an entry could not be downloaded</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – If an entry could not be downloaded</p>
 </dd>
 </dl>
 </dd></dl>
@@ -200,17 +200,17 @@
 <dd><p>Retireve a list of PDB entries where the uniprot can be found.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>unp</strong> (<em>str</em>) – Uniprot identifier</p>
+<dd class="field-odd"><p><strong>unp</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Uniprot identifier</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>Exception</strong> – If list of PDB entries could not be obtained.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.9)"><strong>Exception</strong></a> – If list of PDB entries could not be obtained.</p>
 </dd>
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Data structure with pdb-id:label_asym_id
+<dd class="field-odd"><p>Data structure with (pdb-id,label_asym_id)
 mappings.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict[str,list[str]]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a>,<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -225,7 +225,7 @@ mappings.</p>
 <dd><p>Download PDB chain given the pdb id and chain id</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>item</strong> (<em>tuple</em><em>[</em><em>str</em><em>,</em><em>str</em><em>]</em>) – PDB-id and label_asym_id</p>
+<dd class="field-odd"><p><strong>item</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>,</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>]</em>) – PDB-id and label_asym_id</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>tuple[str,str] = auth_asym_id, file path</p>
@@ -251,7 +251,7 @@ discarded</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>unp</strong> (<em>str</em>) – UniProt id.</p></li>
+<li><p><strong>unp</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – UniProt id.</p></li>
 <li><p><strong>rmsd</strong> (<em>flouat</em>) – Threshold to for alignment acceptance</p></li>
 </ul>
 </dd>
@@ -265,8 +265,8 @@ discarded</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>file_path</strong> (<em>str</em>) – Path to the PDB entry.</p></li>
-<li><p><strong>chain_id</strong> (<em>str</em>) – Chain identifier to pick from PDB entry</p></li>
+<li><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Path to the PDB entry.</p></li>
+<li><p><strong>chain_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Chain identifier to pick from PDB entry</p></li>
 </ul>
 </dd>
 </dl>
@@ -280,7 +280,7 @@ discarded</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>structure</strong> (<em>gemmi.Structure</em>) – gemmi structure</p></li>
-<li><p><strong>chain</strong> (<em>str</em>) – label_asym_id</p></li>
+<li><p><strong>chain</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – label_asym_id</p></li>
 <li><p><strong>transformation</strong> (<em>gemmi.Transformation</em>) – gemmi transforamtion
 object.</p></li>
 </ul>
@@ -343,8 +343,8 @@ object.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>logger</strong> (<em>logging.Logger</em>) – Application logger</p></li>
-<li><p><strong>args</strong> (<em>argparse.Namespace</em>) – Application arguments.</p></li>
+<li><p><strong>logger</strong> (<a class="reference external" href="https://docs.python.org/3/library/logging.html#logging.Logger" title="(in Python v3.9)"><em>logging.Logger</em></a>) – Application logger</p></li>
+<li><p><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.Namespace" title="(in Python v3.9)"><em>argparse.Namespace</em></a>) – Application arguments.</p></li>
 </ul>
 </dd>
 </dl>
@@ -356,13 +356,13 @@ object.</p></li>
 <dd><p>Set up logger of the application</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>logger_name</strong> (<em>str</em>) – Name of the logger to be used</p>
+<dd class="field-odd"><p><strong>logger_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Name of the logger to be used</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Application log.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>logging.logger</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/logging.html#logging.Logger" title="(in Python v3.9)">logging.Logger</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -390,9 +390,9 @@ UniProt id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>unp</strong> (<em>str</em>) – Uniprot identifier</p></li>
-<li><p><strong>pdb</strong> (<em>str</em>) – PDB identifier</p></li>
-<li><p><strong>chain</strong> (<em>str</em>) – Chain identifier aka label_asym_id</p></li>
+<li><p><strong>unp</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Uniprot identifier</p></li>
+<li><p><strong>pdb</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – PDB identifier</p></li>
+<li><p><strong>chain</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Chain identifier aka label_asym_id</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises</dt>
@@ -407,7 +407,7 @@ UniProt id.</p>
 <dd><p>Check valid path</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – Path to file or directory to be checked</p>
+<dd class="field-odd"><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Path to file or directory to be checked</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>argparse.ArgumentTypeError</strong> – If it is invalid</p>
@@ -421,7 +421,7 @@ UniProt id.</p>
 <dd><p>Check if number is a positive float</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>nmb</strong> (<em>str</em>) – float representation as string</p>
+<dd class="field-odd"><p><strong>nmb</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – float representation as string</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>ArgumentTypeError</strong> – on validation error</p>
@@ -430,7 +430,7 @@ UniProt id.</p>
 <dd class="field-odd"><p>float number</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>float</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -441,7 +441,7 @@ UniProt id.</p>
 <dd><p>Check pdb entry is a valid pdb identifier (syntax only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>pdb_id</strong> (<em>str</em>) – PDB identifier</p>
+<dd class="field-odd"><p><strong>pdb_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – PDB identifier</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>ArgumentTypeError</strong> – On validation error</p>
@@ -450,7 +450,7 @@ UniProt id.</p>
 <dd class="field-odd"><p>PDb identifer</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -481,7 +481,7 @@ UniProt id.</p>
 <dd><p>Check if uniprot can be valid (syntax only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>unp</strong> (<em>str</em>) – UniProt identifier</p>
+<dd class="field-odd"><p><strong>unp</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – UniProt identifier</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>ArgumentTypeError</strong> – On validation error.</p>
@@ -490,7 +490,7 @@ UniProt id.</p>
 <dd class="field-odd"><p>UniProt identifier</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></p>
 </dd>
 </dl>
 </dd></dl>
