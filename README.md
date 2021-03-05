@@ -1,6 +1,6 @@
 # Superposer
 
-This is an example Python application demonstrating basic use case of superposing all proteins from PDB given the uniprot id, threshold and pivot. Documentation of the process and individual components is [here](url)
+This is an example Python application demonstrating basic use case of superposing all proteins from PDB given the uniprot id, threshold and pivot. Documentation of the process and individual components is [here](https://lpravda.github.io/example/)
 
 ## Installation instructions
 

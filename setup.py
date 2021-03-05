@@ -15,7 +15,7 @@ setup(
     long_description_content_type="text/markdown",
     project_urls={
         "Source code": "https://github.com/lpravda/example.git",
-        "Documentation": "https://github.com/lpravda/example.git",
+        "Documentation": "https://lpravda.github.io/example/",
     },
     author="Lukas Pravda",
     author_email="luky.pravda@gmail.com",
