@@ -1,0 +1,548 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>API documentation &mdash; superposer 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Superposer" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> superposer
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#superposer-core">superposer.core</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#superposer-scripts">superposer.scripts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#superposer-utils">superposer.utils</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">superposer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>API documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/api.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-documentation">
+<h1>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This documentation is generated automatically</p>
+<div class="section" id="superposer-core">
+<h2>superposer.core<a class="headerlink" href="#superposer-core" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-superposer.core.data_provider"></span><dl class="py function">
+<dt id="superposer.core.data_provider.download_structure">
+<code class="sig-prename descclassname"><span class="pre">superposer.core.data_provider.</span></code><code class="sig-name descname"><span class="pre">download_structure</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdb_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.core.data_provider.download_structure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download PDB structure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pdb_id</strong> (<em>str</em>) – PDB identifier.</p></li>
+<li><p><strong>chain_id</strong> (<em>str</em>) – label_asym_id identifier.</p></li>
+<li><p><strong>file_path</strong> (<em>str</em>) – Path where the structure should be saved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If an entry could not be downloaded</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="superposer.core.data_provider.list_pdbs_for_uniprot">
+<code class="sig-prename descclassname"><span class="pre">superposer.core.data_provider.</span></code><code class="sig-name descname"><span class="pre">list_pdbs_for_uniprot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.core.data_provider.list_pdbs_for_uniprot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retireve a list of PDB entries where the uniprot can be found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>unp</strong> (<em>str</em>) – Uniprot identifier</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – If list of PDB entries could not be obtained.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Data structure with pdb-id:label_asym_id
+mappings.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict[str,list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-superposer.core.manager"></span><dl class="py class">
+<dt id="superposer.core.manager.Manager">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">superposer.core.manager.</span></code><code class="sig-name descname"><span class="pre">Manager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pivot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.core.manager.Manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Superposer manager orchastrating computation.</p>
+<dl class="py method">
+<dt id="superposer.core.manager.Manager.download_template">
+<code class="sig-name descname"><span class="pre">download_template</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.core.manager.Manager.download_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download PDB chain given the pdb id and chain id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item</strong> (<em>tuple</em><em>[</em><em>str</em><em>,</em><em>str</em><em>]</em>) – PDB-id and label_asym_id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>tuple[str,str] = auth_asym_id, file path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="superposer.core.manager.Manager.process_protein">
+<code class="sig-name descname"><span class="pre">process_protein</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmsd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.core.manager.Manager.process_protein" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Process uniprot protein:</dt><dd><ul class="simple">
+<li><p>Retrieve list of relevant PDB ids</p></li>
+<li><p>Download their structures</p></li>
+<li><p>Align them to pivot</p></li>
+<li><p>Write out superposed form</p></li>
+<li><p>write out statistics</p></li>
+</ul>
+</dd>
+</dl>
+<p>PDB entries with Calpha RMSD greater than threshold will be
+discarded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unp</strong> (<em>str</em>) – UniProt id.</p></li>
+<li><p><strong>rmsd</strong> (<em>flouat</em>) – Threshold to for alignment acceptance</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="superposer.core.manager.Manager.superpose_structure">
+<code class="sig-name descname"><span class="pre">superpose_structure</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.core.manager.Manager.superpose_structure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Superpose PDB structure to pivot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> (<em>str</em>) – Path to the PDB entry.</p></li>
+<li><p><strong>chain_id</strong> (<em>str</em>) – Chain identifier to pick from PDB entry</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="superposer.core.manager.Manager.write_out_superposed">
+<code class="sig-name descname"><span class="pre">write_out_superposed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">structure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.core.manager.Manager.write_out_superposed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write out superposed protein in mmCIF file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>structure</strong> (<em>gemmi.Structure</em>) – gemmi structure</p></li>
+<li><p><strong>chain</strong> (<em>str</em>) – label_asym_id</p></li>
+<li><p><strong>transformation</strong> (<em>gemmi.Transformation</em>) – gemmi transforamtion
+object.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-superposer.core.resources"></span><p>Web resources consumed by the app.</p>
+<dl class="py data">
+<dt id="superposer.core.resources.URL_BEST_STRUCTURE">
+<code class="sig-prename descclassname"><span class="pre">superposer.core.resources.</span></code><code class="sig-name descname"><span class="pre">URL_BEST_STRUCTURE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'https://www.ebi.ac.uk/pdbe/graph-api/mappings/best_structures/%(unp)s'</span></em><a class="headerlink" href="#superposer.core.resources.URL_BEST_STRUCTURE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves list of PDB structures given UniProt identifier.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="superposer.core.resources.URL_CHAIN_STRUCTURE_DOWNLOAD">
+<code class="sig-prename descclassname"><span class="pre">superposer.core.resources.</span></code><code class="sig-name descname"><span class="pre">URL_CHAIN_STRUCTURE_DOWNLOAD</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'https://www.ebi.ac.uk/pdbe/model-server/v1/%(pdb)s/atoms?auth_asym_id=%(chain)s&amp;copy_all_categories=false'</span></em><a class="headerlink" href="#superposer.core.resources.URL_CHAIN_STRUCTURE_DOWNLOAD" title="Permalink to this definition">¶</a></dt>
+<dd><p>ModelServer query to retrieve selected chain only</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="superposer.core.resources.URL_MOLECULES_IN_ENTRY">
+<code class="sig-prename descclassname"><span class="pre">superposer.core.resources.</span></code><code class="sig-name descname"><span class="pre">URL_MOLECULES_IN_ENTRY</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'https://www.ebi.ac.uk/pdbe/api/pdb/entry/molecules/%(pdb)s'</span></em><a class="headerlink" href="#superposer.core.resources.URL_MOLECULES_IN_ENTRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="superposer.core.resources.URL_PDB_MAPPINGS">
+<code class="sig-prename descclassname"><span class="pre">superposer.core.resources.</span></code><code class="sig-name descname"><span class="pre">URL_PDB_MAPPINGS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'https://www.ebi.ac.uk/pdbe/api/mappings/%(pdb)s'</span></em><a class="headerlink" href="#superposer.core.resources.URL_PDB_MAPPINGS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chains mapping within a PDB entry</p>
+</dd></dl>
+
+</div>
+<div class="section" id="superposer-scripts">
+<h2>superposer.scripts<a class="headerlink" href="#superposer-scripts" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-superposer.scripts.superposer_cli"></span><dl class="py function">
+<dt id="superposer.scripts.superposer_cli.create_parser">
+<code class="sig-prename descclassname"><span class="pre">superposer.scripts.superposer_cli.</span></code><code class="sig-name descname"><span class="pre">create_parser</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#superposer.scripts.superposer_cli.create_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up parse the command line options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>argparse.Namespace parser</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="superposer-utils">
+<h2>superposer.utils<a class="headerlink" href="#superposer-utils" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-superposer.utils.logger"></span><p>Logger methods</p>
+<dl class="py function">
+<dt id="superposer.utils.logger.log_settings">
+<code class="sig-prename descclassname"><span class="pre">superposer.utils.logger.</span></code><code class="sig-name descname"><span class="pre">log_settings</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.logger.log_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compose initial message about application settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logger</strong> (<em>logging.Logger</em>) – Application logger</p></li>
+<li><p><strong>args</strong> (<em>argparse.Namespace</em>) – Application arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="superposer.utils.logger.set_up_logger">
+<code class="sig-prename descclassname"><span class="pre">superposer.utils.logger.</span></code><code class="sig-name descname"><span class="pre">set_up_logger</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'superposer'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.logger.set_up_logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up logger of the application</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>logger_name</strong> (<em>str</em>) – Name of the logger to be used</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Application log.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>logging.logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-superposer.utils.validation"></span><dl class="py class">
+<dt id="superposer.utils.validation.Pivot">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">superposer.utils.validation.</span></code><code class="sig-name descname"><span class="pre">Pivot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdb_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.validation.Pivot" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="superposer.utils.validation.Pivot.chain_id">
+<code class="sig-name descname"><span class="pre">chain_id</span></code><a class="headerlink" href="#superposer.utils.validation.Pivot.chain_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="superposer.utils.validation.Pivot.pdb_id">
+<code class="sig-name descname"><span class="pre">pdb_id</span></code><a class="headerlink" href="#superposer.utils.validation.Pivot.pdb_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="superposer.utils.validation.check_uniprot_in_pdb">
+<code class="sig-prename descclassname"><span class="pre">superposer.utils.validation.</span></code><code class="sig-name descname"><span class="pre">check_uniprot_in_pdb</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.validation.check_uniprot_in_pdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether or not a PDB entry’s chain contains defined
+UniProt id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unp</strong> (<em>str</em>) – Uniprot identifier</p></li>
+<li><p><strong>pdb</strong> (<em>str</em>) – PDB identifier</p></li>
+<li><p><strong>chain</strong> (<em>str</em>) – Chain identifier aka label_asym_id</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ArgumentTypeError</strong> – On validation error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="superposer.utils.validation.path_exist">
+<code class="sig-prename descclassname"><span class="pre">superposer.utils.validation.</span></code><code class="sig-name descname"><span class="pre">path_exist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.validation.path_exist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check valid path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – Path to file or directory to be checked</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>argparse.ArgumentTypeError</strong> – If it is invalid</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="superposer.utils.validation.positive_float">
+<code class="sig-prename descclassname"><span class="pre">superposer.utils.validation.</span></code><code class="sig-name descname"><span class="pre">positive_float</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nmb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.validation.positive_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if number is a positive float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nmb</strong> (<em>str</em>) – float representation as string</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ArgumentTypeError</strong> – on validation error</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>float number</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="superposer.utils.validation.valid_pdb">
+<code class="sig-prename descclassname"><span class="pre">superposer.utils.validation.</span></code><code class="sig-name descname"><span class="pre">valid_pdb</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdb_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.validation.valid_pdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check pdb entry is a valid pdb identifier (syntax only)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pdb_id</strong> (<em>str</em>) – PDB identifier</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ArgumentTypeError</strong> – On validation error</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>PDb identifer</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="superposer.utils.validation.valid_pivot">
+<code class="sig-prename descclassname"><span class="pre">superposer.utils.validation.</span></code><code class="sig-name descname"><span class="pre">valid_pivot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdb_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.validation.valid_pivot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validation of user specified pivot. E.g. 1tqn:A.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pdb_string</strong> (<em>pdb_string</em>) – User argument in the format pdb_id:chain_id</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ArgumentTypeError</strong> – On validation error</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Parsed pivot</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>namedtuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="superposer.utils.validation.valid_uniprot_id">
+<code class="sig-prename descclassname"><span class="pre">superposer.utils.validation.</span></code><code class="sig-name descname"><span class="pre">valid_uniprot_id</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.validation.valid_uniprot_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if uniprot can be valid (syntax only)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>unp</strong> (<em>str</em>) – UniProt identifier</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ArgumentTypeError</strong> – On validation error.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>UniProt identifier</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Superposer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Lukas Pravda.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

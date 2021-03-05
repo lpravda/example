@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Superposer &mdash; superposer 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API documentation" href="api.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> superposer
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">superposer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Superposer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="superposer">
+<h1>Superposer<a class="headerlink" href="#superposer" title="Permalink to this headline">¶</a></h1>
+<p>This is a demonstration project to superpose protein structures. It includes automatic documentation generated from source code.</p>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Basic console app written in Python to carry out superimposition given the set of parameters</p>
+<ul>
+<li><p>Uses multithreading where available</p></li>
+</ul>
+</li>
+<li><p>App uses PDBe API services and ModelServer</p></li>
+<li><p>Superposition uses <a class="reference external" href="https://gemmi.readthedocs.io/en/latest/analysis.html?highlight=superposition#superposition">Gemmi</a> that implements fast quaternion algebra superposition algorithm <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.21439">QCP</a></p></li>
+<li><p>View of the RMSD distribution using <a class="reference external" href="https://streamlit.io/">streamlit</a> to show possibilities of interactive visualization directly in Python.</p></li>
+<li><p>Writes out superposed structures in mmCIF format to enable their visual inspection.</p></li>
+<li><p>Example of unit tests including mocking in <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a></p></li>
+<li><p>Docker image</p></li>
+<li><p>Automatic documentation generated from source code using <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a></p></li>
+<li><p>Basic application level logging to see what’s happening.</p></li>
+<li><p>CI using <a class="reference external" href="https://docs.github.com/en/actions">Github actions</a> to run unit tests and to generate this documentation</p></li>
+</ul>
+</div>
+<div class="section" id="process-description">
+<h2>Process description<a class="headerlink" href="#process-description" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Retrieve a list of mappings for uniprot id (pdb-id and label_asym_id)</p></li>
+<li><p>Due to technical reasons auth_asym_id is needed in another step so another call to retrieve auth_asym_id from label_asym_id given pdb-id.</p></li>
+<li><p>Download portion of asymetric unit given the pdb id and auth_asym_id.</p></li>
+<li><p>Superpose everything on the top of each other (note: ligands are writen out only based on auth_asym_id and not distance to chain.)</p></li>
+<li><p>Write out modified coordinates</p></li>
+<li><p>Write out simple statistics</p></li>
+</ul>
+<p><img alt="histogram" src="_images/superposed.png" /></p>
+</div>
+<div class="section" id="streamlit-visualization">
+<h2>Streamlit visualization<a class="headerlink" href="#streamlit-visualization" title="Permalink to this headline">¶</a></h2>
+<p>Simple interactive histogram of superposition RMSDs. Run the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -e <span class="s2">&quot;.[views]&quot;</span>
+streamlit run superposer/views/show_rmsd.py
+</pre></div>
+</div>
+<p>open web browser and copy paste the URL that is going to be shown. You should see interactive plot similar to this:</p>
+<p><img alt="histogram" src="_images/hist.png" /></p>
+</div>
+<div class="section" id="automatic-documentation">
+<h2>Automatic documentation<a class="headerlink" href="#automatic-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Comprehensive API documentation with information on every function, class and method. This is automatically generated from the source code and comments.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#superposer-core">superposer.core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#superposer-scripts">superposer.scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#superposer-utils">superposer.utils</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="api.html" class="btn btn-neutral float-right" title="API documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Lukas Pravda.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
