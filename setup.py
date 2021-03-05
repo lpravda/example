@@ -43,7 +43,7 @@ setup(
             "sphinx-autodoc-typehints",
             "sphinx-markdown-tables",
         ],
-        "test": ["pytest", "pytest-cov"],
+        "tests": ["pytest", "pytest-cov"],
         "views": ["streamlit", "plotly"],
     },
     classifiers=[

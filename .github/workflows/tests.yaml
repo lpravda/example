@@ -35,4 +35,4 @@ jobs:
       - run: |
           conda install gemmi=0.4.4
           pip install -e ".[tests]"
-      - run: pytest --cov=excercise
+      - run: pytest --cov=superposer
