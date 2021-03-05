@@ -45,7 +45,7 @@ def list_pdbs_for_uniprot(unp):
         Exception: If list of PDB entries could not be obtained.
 
     Returns:
-        dict[str,list[str]]: Data structure with pdb-id:label_asym_id
+        list[tuple[str,str]]: Data structure with (pdb-id,label_asym_id)
         mappings.
     """
     result = {}

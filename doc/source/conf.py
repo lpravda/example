@@ -40,6 +40,12 @@ extensions = [
     "sphinx_copybutton",
     "recommonmark",
 ]
+
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3", None),
+    "gemmi": ("https://project-gemmi.github.io/python-api/", None),
+}
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 pygments_style = "sphinx"
@@ -67,6 +73,8 @@ html_logo = "_static/logo.png"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+
+
 
 
 def setup(app):

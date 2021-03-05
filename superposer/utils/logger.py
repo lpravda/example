@@ -12,7 +12,7 @@ def set_up_logger(logger_name="superposer"):
         logger_name (str): Name of the logger to be used
 
     Returns:
-        logging.logger: Application log.
+        logging.Logger: Application log.
     """
     frm = "[%(asctime)-15s]  %(message)s"
     logging.basicConfig(
