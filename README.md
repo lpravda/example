@@ -14,7 +14,7 @@ conda activate test-env
 Once you have the environment installed and activated, install the application either from repository:
 
 ```
-pip install git+PATH_TO_REPO
+pip install git+https://github.com/lpravda/example.git
 ```
 
 or clone the repository and install it from source
@@ -28,7 +28,7 @@ pip install -e .
 There are two dependencies for the application both of which are installed automatically:
 
 * [gemmi](https://gemmi.readthedocs.io/)
-* [request](https://requests.readthedocs.io/en/master/)
+* [requests](https://requests.readthedocs.io/en/master/)
 
 Gemmi can be conveniently installed also using anaconda from conda-forge channel:
 ```

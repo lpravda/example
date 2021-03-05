@@ -14,8 +14,8 @@ setup(
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     project_urls={
-        "Source code": "TODO",
-        "Documentation": "TODO",
+        "Source code": "https://github.com/lpravda/example.git",
+        "Documentation": "https://github.com/lpravda/example.git",
     },
     author="Lukas Pravda",
     author_email="luky.pravda@gmail.com",
@@ -25,9 +25,10 @@ setup(
     zip_safe=False,
     include_package_data=True,
     python_requires=">=3.6",
-    install_require=[
+    install_requires=[
         "gemmi @ git+https://github.com/project-gemmi/gemmi.git",
         "pandas",
+        "requests"
     ],
     entry_points={
         "console_scripts": ["superposer=superposer.scripts.superposer_cli:main"]
