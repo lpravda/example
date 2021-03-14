@@ -235,7 +235,7 @@ mappings.</p>
 
 <dl class="py method">
 <dt id="superposer.core.manager.Manager.process_protein">
-<code class="sig-name descname"><span class="pre">process_protein</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmsd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.core.manager.Manager.process_protein" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">process_protein</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmsd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.core.manager.Manager.process_protein" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Process uniprot protein:</dt><dd><ul class="simple">
 <li><p>Retrieve list of relevant PDB ids</p></li>
@@ -252,7 +252,8 @@ discarded</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>unp</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – UniProt id.</p></li>
-<li><p><strong>rmsd</strong> (<em>flouat</em>) – Threshold to for alignment acceptance</p></li>
+<li><p><strong>rmsd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Threshold to for alignment acceptance</p></li>
+<li><p><strong>threads</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of threads to be used</p></li>
 </ul>
 </dd>
 </dl>
@@ -431,6 +432,26 @@ UniProt id.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="superposer.utils.validation.positive_int">
+<code class="sig-prename descclassname"><span class="pre">superposer.utils.validation.</span></code><code class="sig-name descname"><span class="pre">positive_int</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nmb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superposer.utils.validation.positive_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if number is a positive float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nmb</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – float representation as string</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ArgumentTypeError</strong> – on validation error</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>int number</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
 </dd>
 </dl>
 </dd></dl>
