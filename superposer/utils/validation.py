@@ -119,6 +119,27 @@ def positive_float(nmb):
         raise ArgumentTypeError("Value needs to be positive float.")
 
 
+def positive_int(nmb):
+    """Check if number is a positive float
+
+    Args:
+        nmb (str): float representation as string
+
+    Raises:
+        ArgumentTypeError: on validation error
+
+    Returns:
+        int: int number
+    """
+    try:
+        number = int(nmb)
+        if number <= 0:
+            raise ArgumentTypeError("Value needs to be positive int.")
+
+        return number
+    except ValueError:
+        raise ArgumentTypeError("Value needs to be positive int.")
+
 def check_uniprot_in_pdb(unp, pdb, chain):
     """Check whether or not a PDB entry's chain contains defined
     UniProt id.

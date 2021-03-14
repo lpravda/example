@@ -1,8 +1,8 @@
 import json
 import os
+from multiprocessing import Pool
 
 import gemmi
-from multiprocessing import Pool
 import pandas as pd
 from superposer.core import data_provider
 from superposer.utils import logger
@@ -58,7 +58,7 @@ class Manager:
             self.log.error(f"Something went wrong with pivot loading. Reason: {str(e)}")
             raise RuntimeError()
 
-    def process_protein(self, unp, rmsd):
+    def process_protein(self, unp, rmsd, threads):
         """Process uniprot protein:
             * Retrieve list of relevant PDB ids
             * Download their structures
@@ -71,13 +71,14 @@ class Manager:
 
         Args:
             unp (str): UniProt id.
-            rmsd (flouat): Threshold to for alignment acceptance
+            rmsd (float): Threshold to for alignment acceptance
+            threads (int): Number of threads to be used
         """
         self.threshold = rmsd
         data = data_provider.list_pdbs_for_uniprot(unp)
 
         self.log.info("Downloading...")
-        p = Pool(os.cpu_count())
+        p = Pool(threads)
         result = p.map(self.download_template, data)
         self.log.info("Completed.")
 

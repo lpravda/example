@@ -25,17 +25,18 @@ pip install -e .
 
 ## Dependencies
 
-There are two dependencies for the application both of which are installed automatically:
+There are three dependencies for this application. All are installed automatically, however gemmi is installed from conda much faster than from pip (see below):
 
 * [gemmi](https://gemmi.readthedocs.io/)
+* [pandas](https://pandas.pydata.org/)
 * [requests](https://requests.readthedocs.io/en/master/)
 
-Gemmi can be conveniently installed also using anaconda from conda-forge channel:
+Gemmi can be conveniently installed from conda-forge channel:
 ```
-conda install -c conda-forge gemmi
+conda install -c conda-forge "gemmi>=0.4.5"
 ```
 
-However, there is a [bug](https://github.com/project-gemmi/gemmi/issues/86) in the presently released version of gemmi, that prevents the program from working. This has been fixed in the master branch of the repository, but the installation from repository is much slower than from conda mirror.
+The version specified needs to be 0.4.5 or greater as there is a [bug](https://github.com/project-gemmi/gemmi/issues/86) in the previous version of gemmi, that prevents the program from working.
 
 ## Binary
 
@@ -46,6 +47,8 @@ superposer --help
 superposer -o output_dir -u P24941 -p 2vta:A -r 3.0
 ```
 
+The binary then downloads all the relevant chains, superpose them to the pivot, writes out the superposed coordinates and prints out some basic statistics on RMSD using `pandas` package.
+
 ### Parameters - `superposer`
 
 | Parameter   | Type     | Required  | Description |
@@ -54,6 +57,7 @@ superposer -o output_dir -u P24941 -p 2vta:A -r 3.0
 | -u, --uniprot-id       | string   | **Yes**   | Uniprot identifier to define PDB chains to be aligned. |
 | -p, --pdb-pivot        | string   | **Yes**   | Pivot to be used for alignment in format pdb_id:chain_id e.g. '2vta:A' |
 | -r, --rmsd-threshold   | float    | No        | RMSD threshold to accept alignment (Default: 3.0). |
+| -t, --threads          | int      | No        | Number of threads to be used. |
 
 ## Unit tests
 
@@ -69,7 +73,7 @@ pytest
 There is an option to automatically generate documentation from source code using Sphinx package. You can install relevant packages (from the root directory):
 
 ```
-pip install -e "[docs]"
+pip install -e ".[docs]"
 ```
 
 and generate documentation yourself

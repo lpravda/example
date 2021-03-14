@@ -1,10 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import argparse
+import os
 from superposer.utils import validation, logger
 from superposer.core.manager import Manager
 
 log = logger.set_up_logger("superposer")
+
 
 def create_parser():
     """
@@ -40,6 +42,14 @@ def create_parser():
         help="Threshold for acceptance of superposition result [Å].",
     )
     parser.add_argument(
+        "-t",
+        "--threads",
+        required=False,
+        type=validation.positive_int,
+        default=os.cpu_count() - 1,
+        help="Number of threads to be used.",
+    )
+    parser.add_argument(
         "-p",
         "--pdb-pivot",
         required=True,
@@ -62,8 +72,7 @@ def main():
     validation.check_uniprot_in_pdb(args.uniprot_id, pdb, chain)
 
     with Manager(args.pdb_pivot, args.output_dir) as m:
-        m.process_protein(args.uniprot_id, args.rmsd_threshold)
-
+        m.process_protein(args.uniprot_id, args.rmsd_threshold, args.threads)
 
 
 if __name__ == "__main__":
